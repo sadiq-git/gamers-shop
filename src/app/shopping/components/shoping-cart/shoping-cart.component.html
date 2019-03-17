@@ -1,0 +1,58 @@
+<h1>Shopping Cart</h1>
+<ng-container *ngIf="(cart$ | async) as cart;">
+  <ng-container *ngIf="cart.totalItemCount > 0; else noCart">
+    <div class="row">
+      <div class="col-md-9 col-sm-12">
+        <p>You Have {{cart.totalItemCount}} items in your cart
+          <button class="btn btn-light btn-sm float-right" (click)="clearAll()">Clear Shopping Cart</button>
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Item</th>
+              <th class="text-center" style="width:25%">Qty</th>
+              <th class="text-right">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cart.items">
+              <td>
+                <div class="thumbnail" [style.backgroundImage]="'url('+ item.imageUrl +')'"></div>
+              </td>
+              <td>{{item.title}}</td>
+              <td class="text-left">
+                <product-quantity [product]="item" [shopping-cart]="cart" [msg]="null"></product-quantity>
+              </td>
+              <td class="text-right">{{item.totalPrice | currency:'INR':true}}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="table-secondary">
+              <th>Total Price: </th>
+              <th></th>
+              <th></th>
+              <th class="text-right">{{cart.totalPrice | currency:'INR':true}}</th>
+            </tr>
+            <tr>
+
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="form-group">
+          <a class="btn btn-success float-right" [routerLink]="['/checkout']">Check Out</a>
+        </div>
+
+      </div>
+    </div>
+
+  </ng-container>
+
+</ng-container>
+
+
+
+<ng-template #noCart>
+  <p>You don't have any item in your cart</p>
+</ng-template>
