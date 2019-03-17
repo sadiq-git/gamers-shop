@@ -1,11 +1,11 @@
-# Organic shop
+# Gamer Store
 
 A Shopping Website build with Angular 4 and Firebase.
 
 
 ## Demo Link :
 
-- Live Demo: https://oshop-ritwick.firebaseapp.com/ 
+- Live Demo: https://gamerstore-sk.firebaseapp.com/
 
 
 ## Features
