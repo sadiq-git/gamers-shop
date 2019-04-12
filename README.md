@@ -36,7 +36,7 @@ A Shopping Website build with Angular 4 and Firebase.
 ----------
 
 
-> *[The project is from an awesome [Angular 4 course](https://www.udemy.com/the-complete-angular-master-class/) (BY [MOSH HAMEDANI]) which I've taken from Udemy.]*
+> *[The project is from an [Angular 4 course](https://www.udemy.com/the-complete-angular-master-class/) (BY [MOSH HAMEDANI]) which I've taken from Udemy.]*
 
 
 
